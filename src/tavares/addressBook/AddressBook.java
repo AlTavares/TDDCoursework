@@ -1,6 +1,7 @@
 package tavares.addressBook;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import tests.addressBook.Entry;
 
@@ -47,6 +48,16 @@ public class AddressBook {
 		ArrayList<Entry> result = new ArrayList<Entry>();
 		for (Entry entry : AddressList) {
 			if (entry.getPhone().equals(phone))
+				result.add(entry);
+		}
+		return result;
+	}
+
+	public ArrayList<Entry> getByBirthday(int day, int month, int year) {
+		ArrayList<Entry> result = new ArrayList<Entry>();
+		Date date = new Date(year, month, day);
+		for (Entry entry : AddressList) {
+			if (entry.getBirthday().equals(date))
 				result.add(entry);
 		}
 		return result;

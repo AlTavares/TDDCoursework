@@ -3,16 +3,19 @@ package tests.addressBook;
 import java.util.Date;
 
 public class Entry {
-	private int ID;
+	private final int ID;
+	private static int LAST_ID = 0;
 	private String Name, Address, Phone;
 	private Date Birthday;
 
-	public int getID() {
-		return ID;
+	public Entry() {
+		// TODO Auto-generated constructor stub
+		ID = LAST_ID;
+		LAST_ID++;
 	}
 
-	public void setID(int iD) {
-		ID = iD;
+	public int getID() {
+		return ID;
 	}
 
 	public String getName() {
@@ -47,7 +50,4 @@ public class Entry {
 		Birthday = new Date(year, month, day);
 	}
 
-	public Entry() {
-		// TODO Auto-generated constructor stub
-	}
 }
