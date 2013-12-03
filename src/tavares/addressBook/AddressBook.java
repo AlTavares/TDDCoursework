@@ -25,19 +25,30 @@ public class AddressBook {
 		return this.AddressList.size();
 	}
 
-	public Entry getByName(String name) {
+	public ArrayList<Entry> getByName(String name) {
+		ArrayList<Entry> result = new ArrayList<Entry>();
 		for (Entry entry : AddressList) {
 			if (entry.getName().equals(name))
-				return entry;
+				result.add(entry);
 		}
-		return null;
+		return result;
 	}
 
-	public Entry getByAddress(String address) {
+	public ArrayList<Entry> getByAddress(String address) {
+		ArrayList<Entry> result = new ArrayList<Entry>();
 		for (Entry entry : AddressList) {
 			if (entry.getAddress().equals(address))
-				return entry;
+				result.add(entry);
 		}
-		return null;
+		return result;
+	}
+
+	public ArrayList<Entry> getByPhone(String phone) {
+		ArrayList<Entry> result = new ArrayList<Entry>();
+		for (Entry entry : AddressList) {
+			if (entry.getPhone().equals(phone))
+				result.add(entry);
+		}
+		return result;
 	}
 }
