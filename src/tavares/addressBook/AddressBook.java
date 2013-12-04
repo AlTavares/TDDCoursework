@@ -9,7 +9,6 @@ public class AddressBook {
 	ArrayList<Entry> AddressList;
 
 	public AddressBook() {
-		// TODO Auto-generated constructor stub
 		AddressList = new ArrayList<Entry>();
 	}
 

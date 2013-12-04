@@ -183,7 +183,6 @@ public class AddressBookTests extends AbstractLoggingJUnitTest {
 		entryList.add(entry3);
 
 		addressBook.getAddresses().containsAll(entryList);
-		System.out.println(addressBook.getAddresses());
 
 	}
 }
